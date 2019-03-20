@@ -6,6 +6,8 @@ import com.cobra.mybatisdemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @Author: Baron
  * @Description:
@@ -59,5 +61,15 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserInfo findByUserId(Integer userId) {
         return userInfoMapper.selectByPrimaryKey(userId);
+    }
+
+    /**
+     * 查找所有UserInfo
+     *
+     * @return
+     */
+    @Override
+    public List<UserInfo> findAll() {
+        return userInfoMapper.listUser();
     }
 }

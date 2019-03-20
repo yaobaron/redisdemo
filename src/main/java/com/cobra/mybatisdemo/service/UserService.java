@@ -39,4 +39,10 @@ public interface UserService {
      */
     public UserInfo findByUserId(Integer userId);
 
+    /**
+     * 查找所有UserInfo
+     * @return
+     */
+    public List<UserInfo> findAll();
+
 }
